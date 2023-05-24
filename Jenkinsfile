@@ -1,6 +1,6 @@
 node {
  stage('clone git repo'){
- git 'git@github.com:Daria3495/JMeterTask.git'
+ git url: 'git@github.com:Daria3495/JMeterTask.git', branch: 'main'
  }
  
  stage("configure") {
