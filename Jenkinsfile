@@ -14,6 +14,8 @@ node {
  
     stage('publish results'){
         sh "mv /tmp/reports/* $WORKSPACE/$BUILD_NUMBER/"
+        sh "pwd"
+        sh "ls"
         archiveArtifacts artifacts: "JMeter.jtl, HtmlReport/index.html"
     } 
 }
