@@ -9,7 +9,7 @@ node {
  
     stage('run test'){
         sh "mkdir -p /tmp/reports"
-        sh '/usr/local/bin/jmeter -Jjmeter.save.saveservice.output_format=xml -n -t Task2Jmeter.jmx -l /tmp/reports/JMeter.jtl -e -o /tmp/reports/HtmlReport'
+        sh '/usr/local/bin/jmeter -Jjmeter.save.saveservice.output_format=csv -n -t Task2Jmeter.jmx -l /tmp/reports/JMeter.jtl -e -o /tmp/reports/HtmlReport'
     }
  
     stage('publish results'){
