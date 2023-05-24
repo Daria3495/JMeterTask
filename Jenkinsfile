@@ -16,6 +16,6 @@ node {
         sh "mv /tmp/reports/* $WORKSPACE/$BUILD_NUMBER/"
         sh "pwd"
         sh "ls"
-        archiveArtifacts artifacts: "$BUILD_NUMBER/JMeter.csv, $BUILD_NUMBER/HtmlReport/*"
+        archiveArtifacts artifacts: "$BUILD_NUMBER/JMeter.csv, $BUILD_NUMBER/HtmlReport/**"
     } 
 }
